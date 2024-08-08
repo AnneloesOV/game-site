@@ -7,6 +7,9 @@ const addStatus = (status) =>
 
 const createTableRow = () => document.createElement("tr");
 
+const addRating = (rating) => 
+  (document.getElementById("rating").innerHTML = `${rating}`);
+
 const addTableRow = ({ tableBody, tableRow }) => {
   tableBody.appendChild(tableRow);
 };
