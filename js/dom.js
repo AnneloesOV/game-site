@@ -11,7 +11,7 @@ const ids = {
 }
 
 // filter games based on the threshold set by the user in table-overview page
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { 
   const userInput = document.getElementById(ids.userInput);
   if (userInput) {  // Only add the event listener if the element is present (for table-overview page)
     userInput.addEventListener('input', function(event) {
@@ -33,6 +33,7 @@ const addStatus = (status) =>
   (document.getElementById(ids.status).innerHTML =
     document.getElementById(ids.status).innerHTML + "<p>" + status + "</p>");
 
+
 // function to clear the table 
 function clearTable() {
   document.getElementById(ids.table).innerHTML = "";
@@ -51,22 +52,3 @@ function addRow(name, type, rating) {
   typeCell.textContent = type;
   ratingCell.textContent = rating;
 }
-
-
-// // extend table with js
-// const createTableRow = () => document.createElement("tr");
-
-// const addTableRow = ({ tableBody, tableRow }) => {
-//   tableBody.appendChild(tableRow);
-// };
-
-// const addTableCell = ({ tableRow, value, colSpan, className }) => {
-//   const cell = document.createElement("td");
-//   cell.innerHTML = value;
-//   if (colSpan) { cell.colSpan = colSpan; }
-//   if (className) { cell.className = className; }
-//   tableRow.appendChild(cell);
-// };
-
-// const clearTableRows = ({ tableBody }) =>
-//   (document.getElementById(tableBody).innerHTML = "");
