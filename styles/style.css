@@ -109,17 +109,22 @@ th {
 }
 
 button {
-    background-color: black;
+    background-color: #e9e9af;
+    /* background-color: black; */
     cursor: pointer;
     padding: 10px 20px;
     letter-spacing: 1px;
-    color: white;
+    color: black;
     font-size: 14px;
     border: none;
-    border-radius: 50px;
+    /* border-radius: 50px; */
+    border: solid 1px black;
 }
 
 button:hover {
     opacity: 1;
-    background-color: #0039e6;
+    background-color: yellow;
+    color: black;
+    border: solid 1px black;
+    /* background-color: #0039e6; */
 }
