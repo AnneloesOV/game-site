@@ -24,24 +24,23 @@ const game7 = new Game("breakout", "Retro", 3, false);
 
 // display the games in the table
 let gameObjects = [game1, game2, game3, game4, game5, game6, game7];
-displayAllGames(gameObjects);
-addRating(calculateAverageRating(gameObjects));
+showAll();
 
-// function to display all the created games on overview.html website, input parameter is array of Game objects
-function displayAllGames(games) {
-    games.forEach(game => {
-        const gameString = game.toString();
-        addStatus(gameString);
-    })
-}
+// function to display only the favorite games (when button is clicked)
+function showFavorites() {
+    let filteredGames = gameObjects.filter(game => game.favourite);
+    renderGames(filteredGames);
+  }
+  
+// function to show all games (when button is clicked)
+function showAll() {
+    renderGames(gameObjects);
+  }
 
-// function to calculate the average rating, input parameter is array of Game objects
-function calculateAverageRating(games) {
-    let totalRating = 0;
-    let averageRating;
+// function to show games in the table. Input is array of game objects.
+function renderGames(games) {
+    clearTable();
     games.forEach(game => {
-        totalRating += game.rating;    
+        addRow(game.name, game.type, game.rating)
     })
-    const average = totalRating / games.length;
-    return average.toFixed(1); // average with only 1 decimal 
-}
+  }

@@ -71,4 +71,51 @@ footer {
     letter-spacing: 1px;
     color: #4d8000;
     padding: 1%;
+    margin-bottom: 30px;
+}
+
+th, td {
+    width: 200px; /* waarom werkt width: auto niet?? */
+    background-color: #eeeec3;
+    padding: 5%;
+}
+
+th {
+    background-color:#e3e39c;
+}
+
+#user-input {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+
+#buttons {
+    display: flex;
+    justify-self: start;
+    gap: 10px;
+    margin: 1%;
+}
+
+#form {
+    display: flex;
+    justify-self: start;
+    margin: 2%;
+}
+
+button {
+    background-color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    /* opacity: 0.6; */
+    letter-spacing: 1px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 50px;
+}
+
+button:hover {
+    opacity: 1;
+    background-color: #0039e6;
 }
