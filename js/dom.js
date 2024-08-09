@@ -10,13 +10,16 @@ const ids = {
   userInput: "threshold"
 }
 
-// filter games based on threshold for ranking, set by the user
-const userInput = document.getElementById(ids.userInput);
-userInput.addEventListener('input', function(event) {
-  const threshold = userInput.value;
-  let filteredGames = gameObjects.filter(game => game.rating >= threshold);
-  renderGames(filteredGames);
-})
+// filter games based on the threshold set by the user in table-overview page
+document.addEventListener('DOMContentLoaded', function() {
+  const userInput = document.getElementById(ids.userInput);
+  if (userInput) {  // Only add the event listener if the element is present (for table-overview page)
+    userInput.addEventListener('input', function(event) {
+      const threshold = userInput.value;
+      let filteredGames = gameObjects.filter(game => game.rating > threshold);
+      renderGames(filteredGames);
+    }) 
+}})
 
 // display the rating
 const addRating = (rating) => 
