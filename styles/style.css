@@ -66,22 +66,27 @@ nav li {
 }
 
 footer {
-    background-color:#eeeec3;
+    background-color: #e9e9af;
     font-size: smaller;
     letter-spacing: 1px;
-    color: #4d8000;
+    color: #9d8215;
     padding: 1%;
     margin-bottom: 30px;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 th, td {
-    width: 200px; /* waarom werkt width: auto niet?? */
-    background-color: #eeeec3;
+    width: 200px;
+    background-color: whitesmoke;
     padding: 5%;
+    border: 1px solid black;
 }
 
 th {
-    background-color:#e3e39c;
+    background-color: #e9e9af;
 }
 
 #user-input {
@@ -107,7 +112,6 @@ button {
     background-color: black;
     cursor: pointer;
     padding: 10px 20px;
-    /* opacity: 0.6; */
     letter-spacing: 1px;
     color: white;
     font-size: 14px;
