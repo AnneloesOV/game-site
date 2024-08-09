@@ -81,19 +81,25 @@ table {
 
 th, td {
     width: 200px;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    background-color: #f9f9eb;
     padding: 5%;
     border: 1px solid #cece4b;
 }
 
 th {
-    background-color: #e9e9af;
+    /* background-color: #e9e9af; */
+    background-color: beige;
 }
 
 #user-input {
     display: flex;
     flex-direction: column;
     justify-self: start;
+}
+
+#threshold {
+    background-color: beige;
 }
 
 #buttons {
@@ -110,8 +116,8 @@ th {
 }
 
 button {
-    background-color: #e9e9af;
-    /* background-color: black; */
+    /* background-color: #e9e9af; */
+    background-color: beige;
     cursor: pointer;
     padding: 10px 20px;
     letter-spacing: 1px;
@@ -123,9 +129,6 @@ button {
 }
 
 button:hover {
-    opacity: 1;
-    background-color: yellow;
     color: black;
     border: solid 1px black;
-    /* background-color: #0039e6; */
 }
