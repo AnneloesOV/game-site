@@ -72,6 +72,7 @@ footer {
     color: #9d8215;
     padding: 1%;
     margin-bottom: 30px;
+    margin-top: 60px;
 }
 
 table {
@@ -82,7 +83,7 @@ th, td {
     width: 200px;
     background-color: whitesmoke;
     padding: 5%;
-    border: 1px solid black;
+    border: 1px solid #cece4b;
 }
 
 th {
@@ -118,7 +119,7 @@ button {
     font-size: 14px;
     border: none;
     /* border-radius: 50px; */
-    border: solid 1px black;
+    border: solid 1px #cece4b;
 }
 
 button:hover {
