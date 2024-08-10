@@ -11,6 +11,13 @@ class Game {
     toString() {
         return `Name: ${this.name} - Type: ${this.type} - Rating: ${this.rating} - Favourite: ${this.favourite}`;
     }
+    status() {
+        if (this.favourite) {
+            return `The selected game ${this.name} is a favourite!`
+        } else {
+            return `The selected game ${this.name} is not a favourite!`
+        }
+    }
 }
 
 // create 4 games using constructor 

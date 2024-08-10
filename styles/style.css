@@ -20,6 +20,11 @@ p, h2, h3 {
     text-align: left;
 }
 
+#status {
+    text-align: left;
+    padding: 10px;
+}
+
 p {
     font-size: 18px;
     line-height: 1.5;
@@ -79,8 +84,15 @@ table {
     border-collapse: collapse;
 }
 
+table tbody tr:hover {
+    border-collapse: collapse;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
 th, td {
-    width: 200px;
+    width: 1%;
+    height: 20px;
     /* background-color: whitesmoke; */
     background-color: #f9f9eb;
     padding: 5%;
@@ -130,5 +142,5 @@ button {
 
 button:hover {
     color: black;
-    border: solid 1px black;
+    border: solid 2px black;
 }

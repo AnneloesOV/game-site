@@ -21,6 +21,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }) 
 }})
 
+// display the status of the selected game from the table
+document.addEventListener('DOMContentLoaded', function() { 
+  const status = document.getElementById(ids.status);
+  if (status) {  // Only add the event listener if the element is present (for table-overview page)
+    const allTableRows = document.querySelectorAll('tr'); 
+    allTableRows.forEach(row => {
+      row.addEventListener('click', function(event) {
+        const gameName = row.querySelector('td').textContent; // name is in the first cell of the row
+        console.log(gameName);
+        const gameObject = gameObjects.find(game => game.name === gameName);
+        console.log(gameObject);
+        const statusOfGame = gameObject.status();
+        console.log(statusOfGame);
+        status.querySelector('p').textContent = `Status: ${statusOfGame}`;
+      })
+    })
+}})
+
 // display the rating
 const addRating = (rating) => 
   (document.getElementById(ids.rating).innerHTML = `${rating}`);
