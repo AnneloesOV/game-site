@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     })
 }})
+/// BUG ==> SOMEHOW THE TABLE IS NOT ANYMORE LISTENING AFTER FILTERING!
 
 // display the rating
 const addRating = (rating) => 
@@ -51,6 +52,7 @@ const addStatus = (status) =>
   (document.getElementById(ids.status).innerHTML =
     document.getElementById(ids.status).innerHTML + "<p>" + status + "</p>");
 
+    /// REFACTOR => change the names, since this is for the status in the games page
 
 // function to clear the table 
 function clearTable() {
