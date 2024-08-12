@@ -1,55 +1,127 @@
-* {
+html {
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    line-height: 2;
+    height: 100%; /*necessary to make the footer stay at the bottom*/
+    font-size: large;
     text-align: center;
-    font-family: sans-serif;
 }
 
-body {
-    background-color: beige;
-    max-width: 870px;
-    margin: auto;
-    color:  #2e4d00;
+buttons, form, table {
+    margin: 20px auto;
 }
 
-main {
-    max-width: 750px;
-    margin: auto;
-    padding: 2% 0%;
-}
-
-p, h2, h3 {
+th, td {
+    padding: 0px 20px; /*vertical horizontal*/
     text-align: left;
 }
 
-#status {
-    text-align: left;
-    padding: 10px;
+table {
+    border-collapse: collapse; /* no space between the table cells */
 }
+
+table tbody tr:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+#form input {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: medium;
+    text-align: center;
+    width: 50px;
+}
+
+button {
+    border: black;
+    border-radius: 20px;
+    border: solid 2px black;
+    padding: 10px 20px;
+    background-color: white;
+    margin: 0 20px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+button:hover {
+    padding: 12px 22px;
+    border-radius: 22px;
+}  
 
 p {
-    font-size: 18px;
-    line-height: 1.5;
+    text-align: left;
 }
 
-.startimage {
-    padding-top: 5%;
-    padding-bottom: 2%;
-    margin: auto;
-    max-width: 700px;
+/* information about the font from Google fonts */
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#MyGames {
+    font-family: "Press Start 2P", sans-serif;
+    font-size: xx-large;
+    justify-content: center;
+}
+
+img {
+    display: block;
+    margin: 50px auto;
+}
+
+body { /*necessary to make the footer stay at the bottom*/
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    padding: 20px;
+    max-width: 960px;
+    margin-inline: auto;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.background-container {
+    /* position: relative; */
+    height: 321px;
+    background-image: url('../images/pacman2-black-rim.png');
+    background-position: top;
+}
+
+header {
+    /* background-color: #55d6aa; */
+    background-color: black;
 }
 
 nav {
     width: 100%;
-    background-color: greenyellow;
 }
 
 nav a {
     letter-spacing: 2px;
     text-decoration: none;
     font-weight: bold;
-    color: #2e4d00;
+    color: white;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: medium;
+}
+
+nav a:hover {
+    color: #ffff3d; 
+}
+
+.actual a {
+    color: #ffff3d; 
 }
 
 nav ul {
+    margin: auto;
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -58,89 +130,13 @@ nav ul {
 
 nav li {
     padding: 2%;
-    margin: auto;
-    width: 100%;
-}
-
-.actual {
-    background-color: #7acc00;
-}
-
-.actual a {
-    color: #c2ff66; 
+    /* margin: auto; */
 }
 
 footer {
-    background-color: #e9e9af;
-    font-size: smaller;
-    letter-spacing: 1px;
-    color: #9d8215;
-    padding: 1%;
-    margin-bottom: 30px;
-    margin-top: 60px;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-table tbody tr:hover {
-    border-collapse: collapse;
-    border: 2px solid black;
-    cursor: pointer;
-}
-
-th, td {
-    width: 1%;
-    height: 20px;
-    /* background-color: whitesmoke; */
-    background-color: #f9f9eb;
-    padding: 5%;
-    border: 1px solid #cece4b;
-}
-
-th {
-    /* background-color: #e9e9af; */
-    background-color: beige;
-}
-
-#user-input {
-    display: flex;
-    flex-direction: column;
-    justify-self: start;
-}
-
-#threshold {
-    background-color: beige;
-}
-
-#buttons {
-    display: flex;
-    justify-self: start;
-    gap: 10px;
-    margin: 1%;
-}
-
-#form {
-    display: flex;
-    justify-self: start;
-    margin: 2%;
-}
-
-button {
-    /* background-color: #e9e9af; */
-    background-color: beige;
-    cursor: pointer;
-    padding: 10px 20px;
-    letter-spacing: 1px;
-    color: black;
-    font-size: 14px;
-    border: none;
-    /* border-radius: 50px; */
-    border: solid 1px #cece4b;
-}
-
-button:hover {
-    color: black;
-    border: solid 2px black;
+    display: block;
+    text-align: center;
+    margin-top: auto;
+    padding: 50px;
+    background-color: #ffcccc;
 }

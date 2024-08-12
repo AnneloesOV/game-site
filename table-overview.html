@@ -4,47 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Games</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link type="text/css" href="styles/style.css" rel="stylesheet" />
     <script src="js/dom.js" defer></script>
     <script src="js/table-overview.js" defer></script>
   </head>
   <body>
+    <div class="background-container"></div>
     <header>
-      <img src="images/pacman2.png" class="startimage">
-      <nav>
+      <!-- <img src="images/pacman2.png" class="startimage"> -->
+      <nav id="navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="overview.html">Overview</a></li>
-          <li class="actual"><a href="table-overview.html">Table overview</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="overview.html">GAMES</a></li>
+          <li class="actual"><a href="table-overview.html">TABLE</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <h2>My Games</h2>
-       <div id="user-input">
-        <div id="buttons">
-        <button type="button" onclick="showFavorites()">Show Favorites</button>
-        <button type="button" onclick="showAll()">Show All</button>
+    <div class="wrapper">
+      <main>
+        <h2 id ="MyGames">My Games</h2>
+        <div id="user-input">
+          <div id="buttons">
+          <button type="button" onclick="showFavorites()">Show Favorites</button>
+          <button type="button" onclick="showAll()">Show All</button>
+          </div>
+          <div id="form">
+          <form>
+            <label for="threshold">Show only games with ranking higher than:</label>
+            <input type="text" id="threshold">
+          </form>
+          </div>
         </div>
-        <div id="form">
-        <form>
-          <label for="threshold">Show only games with ranking higher than:</label>
-          <input type="text" id="threshold">
-        </form>
-        </div>
-       </div>
-       <table>
-        <thead>
-            <tr> <!-- table row -->
-                <th>Name</th> <!-- table header -->
-                <th>Type</th>
-                <th>Rating</th>
-            </tr>
-        </thead>
-        <tbody id="my-games-table-body"></tbody>
-       </table>
-       <div id="status"><p>Status: no game selected<p></div>
-    </main>
-    <footer>Anneloes Oude Vrielink: Front-end - 2024</footer>
+        <table>
+          <thead>
+              <tr> <!-- table row -->
+                  <th>Name</th> <!-- table header -->
+                  <th>Type</th>
+                  <th>Rating</th>
+              </tr>
+          </thead>
+          <tbody id="my-games-table-body"></tbody>
+        </table>
+        <div id="status"><p>Status: no game selected<p></div>
+      </main>
+    </div>
+    <footer>Anneloes Oude Vrielink • Front-end • 2024</footer>
   </body>
 </html>
