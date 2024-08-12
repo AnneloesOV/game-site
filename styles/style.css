@@ -7,6 +7,10 @@ html {
     text-align: center;
 }
 
+main {
+    margin-top: 50px;
+}
+
 buttons, form, table {
     margin: 20px auto;
 }
@@ -14,6 +18,10 @@ buttons, form, table {
 th, td {
     padding: 0px 20px; /*vertical horizontal*/
     text-align: left;
+}
+
+td:nth-child(3) { /* index of table columns starts at 1 */
+    text-align: center;
 }
 
 table {
@@ -42,16 +50,22 @@ button {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
     font-size: large;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 4px 4px 0 #999999;
+    /*box-shadow: h-offset v-offset blur-radius spread-radius color inset;*/
 }
 
 button:hover {
-    padding: 12px 22px;
-    border-radius: 22px;
+    cursor: pointer;
+    /* padding: 12px 22px;
+    border-radius: 22px; */
 }  
 
+button:active {
+    box-shadow: 4px 4px 0 #999999 inset;
+}
+
 p {
-    text-align: left;
+    text-align: center;
 }
 
 /* information about the font from Google fonts */
@@ -77,10 +91,12 @@ body { /*necessary to make the footer stay at the bottom*/
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #f9f9eb;
 }
 
 .wrapper {
     padding: 20px;
+    min-width: 95%;
     max-width: 960px;
     margin-inline: auto;
     /* display: flex;
@@ -139,4 +155,38 @@ footer {
     margin-top: auto;
     padding: 50px;
     background-color: #ffcccc;
+    color: white;
+    /* color: #ffe6ee; */
+    font-weight: bolder;
+    letter-spacing: 2px;
+    /* border-top: 2px solid #ff1a66; */
+}
+
+#cardsContainer {
+    /* background-color: beige; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* gap: 10px;
+    padding: 20px; */
+}
+
+.gameCard {
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 0 #999999;
+    font-size: large;
+    margin: 20px;
+}
+
+.gameCard h3 {
+    font-family: "Press Start 2P", sans-serif;
+    letter-spacing: 1.5px;
+    background-color: black;
+    padding: 22px;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
 }

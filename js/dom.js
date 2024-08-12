@@ -7,7 +7,8 @@ const ids = {
   number: "number",
   form: "form", 
   buttons: "buttons",
-  userInput: "threshold"
+  userInput: "threshold",
+  container: "cardsContainer"
 }
 
 // filter games based on the threshold set by the user in table-overview page
@@ -71,4 +72,21 @@ function addRow(name, type, rating) {
   nameCell.textContent = name;
   typeCell.textContent = type;
   ratingCell.textContent = rating;
+}
+
+// function to make a div for a game
+function addGameCard(name, type, rating) {
+  const card = document.createElement("div");
+  card.className = "gameCard";
+
+  const heading = document.createElement("h3");
+  heading.innerHTML = name;
+  card.appendChild(heading);
+  
+  const properties = document.createElement("div");
+  properties.innerHTML = `type: ${type} • rating: ${rating}`;
+  card.appendChild(properties);
+
+  const container = document.getElementById(ids.container);
+  container.appendChild(card);
 }

@@ -13,7 +13,7 @@ class Game {
     }
 }
 
-// create 4 games using constructor 
+// create games using constructor 
 const game1 = new Game("Tetris", "Retro", 5, true);
 const game2 = new Game("Pacman", "Retro", 5, true);
 const game3 = new Game("Snake", "Retro", 4, true);
@@ -24,8 +24,15 @@ const game7 = new Game("breakout", "Retro", 3, false);
 
 // display the games in the table
 let gameObjects = [game1, game2, game3, game4, game5, game6, game7];
-displayAllGames(gameObjects);
-addRating(calculateAverageRating(gameObjects));
+// displayAllGames(gameObjects);
+// addRating(calculateAverageRating(gameObjects));
+renderGames(gameObjects);
+
+function renderGames(games) {
+    games.forEach(game => {
+        addGameCard(game.name, game.type, game.rating);
+    })
+}
 
 // function to display all the created games on overview.html website, input parameter is array of Game objects
 function displayAllGames(games) {
